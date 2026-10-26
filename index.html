@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<header class="app-header">
+
+    <div class="header-content">
+
+        <h1>Focus Elicigo</h1>
+
+        <p>Protect your focus. Control your time.</p>
+
+    </div>
+
+</header>
+
+
+<main class="app-container">
+
+
+    <!-- =================================================
+         FOCUS CARD
+    ================================================== -->
+
+    <section class="focus-card">
+
+        <div class="focus-intro">
+
+            <h2>Ready to Focus?</h2>
+
+            <p>
+                Start a focus session and stay away from distractions.
+            </p>
+
+        </div>
+
+
+        <!-- DURATION -->
+
+        <div class="duration-section">
+
+            <button
+                class="duration-btn"
+                data-minutes="15"
+                type="button"
+            >
+                15 MIN
+            </button>
+
+            <button
+                class="duration-btn active"
+                data-minutes="25"
+                type="button"
+            >
+                25 MIN
+            </button>
+
+            <button
+                class="duration-btn"
+                data-minutes="50"
+                type="button"
+            >
+                50 MIN
+            </button>
+
+        </div>
+
+
+        <!-- FOCUS MODE -->
+
+        <div class="mode-section">
+
+            <div class="mode-heading">
+
+                <h2>Focus Mode</h2>
+
+                <p>
+                    Choose how strongly Focus Elicigo should protect your session.
+                </p>
+
+            </div>
+
+
+            <div class="mode-options">
+
+                <button
+                    class="mode-btn active"
+                    data-mode="easy"
+                    type="button"
+                >
+                    <strong>EASY</strong>
+
+                    <span>
+                        Light protection
+                    </span>
+                </button>
+
+
+                <button
+                    class="mode-btn"
+                    data-mode="medium"
+                    type="button"
+                >
+                    <strong>MEDIUM</strong>
+
+                    <span>
+                        Stronger protection
+                    </span>
+                </button>
+
+
+                <button
+                    class="mode-btn"
+                    data-mode="strict"
+                    type="button"
+                >
+                    <strong>STRICT</strong>
+
+                    <span>
+                        Maximum protection
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEDIUM PIN -->
+
+        <section
+            id="mediumPinSection"
+            class="pin-section"
+        >
+
+            <div class="pin-heading">
+
+                <h3>
+                    🔐 Medium Focus PIN
+                </h3>
+
+                <p>
+                    Create a 4-digit PIN. You will need it to pause
+                    or stop a Medium Focus session.
+                </p>
+
+            </div>
+
+
+            <div class="pin-form">
+
+                <input
+                    type="password"
+                    id="mediumPin"
+                    placeholder="4-digit PIN"
+                    maxlength="4"
+                    inputmode="numeric"
+                    autocomplete="off"
+                >
+
+                <input
+                    type="password"
+                    id="confirmMediumPin"
+                    placeholder="Confirm PIN"
+                    maxlength="4"
+                    inputmode="numeric"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="saveMediumPin"
+                    type="button"
+                >
+                    SAVE PIN
+                </button>
+
+            </div>
+
+
+            <p
+                id="pinStatus"
+                class="pin-status"
+            ></p>
+
+        </section>
+
+
+        <!-- TIMER -->
+
+        <section class="timer-section">
+
+            <div
+                id="timerDisplay"
+                class="timer-display"
+            >
+                25:00
+            </div>
+
+            <p class="timer-label">
+                Focus time remaining
+            </p>
+
+        </section>
+
+
+        <!-- START -->
+
+        <button
+            id="startBtn"
+            class="start-btn"
+            type="button"
+        >
+            START FOCUS
+        </button>
+
+
+        <!-- STATUS -->
+
+        <div class="status-area">
+
+            <div
+                id="focusStatus"
+                class="status-badge"
+            >
+                Focus Mode: OFF
+            </div>
+
+            <div
+                id="blockingStatus"
+                class="status-badge"
+            >
+                Blocking: OFF
+            </div>
+
+        </div>
+
+
+        <!-- PAUSE / STOP -->
+
+        <div class="control-buttons">
+
+            <button
+                id="pauseBtn"
+                class="secondary-btn"
+                type="button"
+                disabled
+            >
+                PAUSE
+            </button>
+
+            <button
+                id="stopBtn"
+                class="secondary-btn danger-btn"
+                type="button"
+                disabled
+            >
+                STOP
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         STATISTICS
+    ================================================== -->
+
+    <section class="statistics-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ⏱️
+            </div>
+
+            <div
+                id="focusTime"
+                class="stat-value"
+            >
+                0
+            </div>
+
+            <div class="stat-label">
+                Minutes Focused
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🎯
+            </div>
+
+            <div
+                id="sessions"
+                class="stat-value"
+            >
+                0
+            </div>
+
+            <div class="stat-label">
+                Sessions
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🔥
+            </div>
+
+            <div
+                id="streak"
+                class="stat-value"
+            >
+                0
+            </div>
+
+            <div class="stat-label">
+                Day Streak
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TODAY'S PROGRESS
+    ================================================== -->
+
+    <section class="goal-card">
+
+        <div class="goal-header">
+
+            <div class="goal-title">
+
+                <span class="goal-icon">
+                    🎯
+                </span>
+
+                <h2>
+                    Today's Progress
+                </h2>
+
+            </div>
+
+            <strong
+                id="goalText"
+                class="goal-number"
+            >
+                0 / 60 min
+            </strong>
+
+        </div>
+
+
+        <div class="progress-container">
+
+            <div
+                id="progressBar"
+                class="progress-bar"
+            ></div>
+
+        </div>
+
+
+        <p
+            id="progressMessage"
+            class="progress-message"
+        >
+            60 minutes remaining today.
+        </p>
+
+
+        <div class="goal-stats">
+
+            <div class="today-stat">
+
+                <div class="today-stat-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <strong id="todayMinutes">
+                        0
+                    </strong>
+
+                    <span>
+                        Today's Minutes
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="best-streak-stat">
+
+                <div class="best-streak-icon">
+                    🔥
+                </div>
+
+                <div>
+
+                    <strong id="bestStreak">
+                        0
+                    </strong>
+
+                    <span>
+                        Best Streak
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SESSION HISTORY
+    ================================================== -->
+
+    <section class="history-section">
+
+        <div class="history-header">
+
+            <div class="history-title">
+
+                <span class="history-icon">
+                    📝
+                </span>
+
+                <h2>
+                    Session History
+                </h2>
+
+            </div>
+
+            <span>
+                Recent sessions
+            </span>
+
+        </div>
+
+
+        <div
+            id="sessionHistoryList"
+            class="session-history-list"
+        >
+
+            <div class="empty-history">
+                No sessions yet.
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BLOCKED WEBSITES
+    ================================================== -->
+
+    <section class="blocked-card">
+
+        <div class="blocked-header">
+
+            <h2>
+                Blocked Websites
+            </h2>
+
+            <p>
+                These websites will be blocked when Focus Mode is active.
+            </p>
+
+        </div>
+
+
+        <div class="blocking-small-status">
+
+            <span>
+                Blocking:
+            </span>
+
+            <strong id="blockingStatusSmall">
+                OFF
+            </strong>
+
+        </div>
+
+
+        <div class="blocked-count">
+
+            Blocked websites:
+
+            <strong id="blockedCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="website-add">
+
+            <input
+                id="websiteInput"
+                type="text"
+                placeholder="example.com"
+                autocomplete="off"
+            >
+
+            <button
+                id="addWebsiteBtn"
+                type="button"
+            >
+                ADD
+            </button>
+
+        </div>
+
+
+        <ul
+            id="blockedWebsites"
+            class="blocked-websites"
+        >
+
+            <li class="empty-blocked">
+                No websites blocked yet.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BLOCKED APPS
+    ================================================== -->
+
+    <section class="blocked-card apps-card">
+
+        <div class="blocked-header">
+
+            <h2>
+                Blocked Apps
+            </h2>
+
+            <p>
+                Select apps that Focus Elicigo should block during Focus Mode.
+            </p>
+
+        </div>
+
+
+        <div class="apps-placeholder">
+
+            <div class="apps-placeholder-icon">
+                📱
+            </div>
+
+            <strong>
+                No apps selected yet
+            </strong>
+
+            <span>
+                Android app blocking will be connected later.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="app-footer">
+
+        <p>
+            Focus Elicigo
+        </p>
+
+        <span>
+            Protect your focus. Control your time.
+        </span>
+
+    </footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+          </html>
