@@ -1,0 +1,1488 @@
+/* =========================================================
+   FOCUS ELICIGO
+   COMPLETE STYLE.CSS
+   STOP BUTTON MATCHES PAUSE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --navy: #171f33;
+    --navy-light: #222c45;
+    --text: #182033;
+    --muted: #7b8494;
+    --background: #f3f6fb;
+    --card: #ffffff;
+    --soft: #f4f7fb;
+    --border: #e1e6ed;
+    --success: #1d9b62;
+    --danger: #c94b4b;
+    --shadow: 0 10px 30px rgba(23, 31, 51, 0.07);
+    --radius: 22px;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+
+    min-height: 100vh;
+
+    line-height: 1.5;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.app-header {
+    background: var(--navy);
+    color: white;
+
+    padding: 28px 20px;
+
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.app-header h1 {
+    font-size: 28px;
+    font-weight: 750;
+    margin-bottom: 5px;
+}
+
+.app-header p {
+    color: #c8cfdb;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.app-container {
+    width: min(1100px, calc(100% - 32px));
+    margin: 30px auto 50px;
+}
+
+
+/* =========================================================
+   FOCUS CARD
+   ========================================================= */
+
+.focus-card {
+    background: var(--card);
+    border-radius: var(--radius);
+
+    padding: 38px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.focus-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.focus-intro h2 {
+    font-size: 26px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.focus-intro p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   DURATION
+   ========================================================= */
+
+.duration-section {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 38px;
+}
+
+.duration-btn {
+    border: 2px solid var(--border);
+
+    background: white;
+
+    color: var(--text);
+
+    border-radius: 16px;
+
+    min-height: 70px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.duration-btn:hover {
+    transform: translateY(-1px);
+    border-color: var(--navy);
+}
+
+.duration-btn.active {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+
+/* =========================================================
+   MODE SECTION
+   ========================================================= */
+
+.mode-section {
+    margin-bottom: 24px;
+}
+
+.mode-heading {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.mode-heading h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.mode-heading p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   MODE OPTIONS
+   ========================================================= */
+
+.mode-options {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+.mode-btn {
+    min-height: 105px;
+
+    border-radius: 18px;
+
+    border: 2px solid var(--border);
+
+    background: white;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 6px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.mode-btn:hover {
+    transform: translateY(-1px);
+    border-color: var(--navy);
+}
+
+.mode-btn strong {
+    font-size: 17px;
+}
+
+.mode-btn span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.mode-btn.active {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+.mode-btn.active span {
+    color: #c9cfda;
+}
+
+
+/* =========================================================
+   MEDIUM PIN
+   ========================================================= */
+
+.pin-section {
+    background: #f4f7fb;
+
+    border-radius: 20px;
+
+    padding: 26px;
+
+    margin-top: 22px;
+
+    border: 1px solid #e8edf4;
+}
+
+.pin-heading h3 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.pin-heading p {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.pin-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr auto;
+
+    gap: 12px;
+
+    align-items: center;
+}
+
+.pin-form input {
+    width: 100%;
+
+    height: 54px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 13px;
+
+    background: white;
+
+    padding: 0 16px;
+
+    font-size: 16px;
+
+    color: var(--text);
+
+    outline: none;
+}
+
+.pin-form input:focus {
+    border-color: var(--navy);
+}
+
+.pin-form button {
+    height: 54px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.pin-status {
+    margin-top: 10px;
+
+    font-size: 13px;
+
+    color: var(--success);
+}
+
+
+/* =========================================================
+   TIMER
+   ========================================================= */
+
+.timer-section {
+    text-align: center;
+
+    padding: 32px 0 22px;
+}
+
+.timer-display {
+    font-size: clamp(58px, 9vw, 92px);
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    color: var(--navy);
+}
+
+.timer-label {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   START BUTTON
+   ========================================================= */
+
+.start-btn {
+    width: 100%;
+
+    min-height: 58px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.2s ease;
+}
+
+.start-btn:hover {
+    transform: translateY(-1px);
+}
+
+.start-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status-area {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 16px;
+}
+
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 36px;
+
+    padding: 7px 14px;
+
+    border-radius: 999px;
+
+    background: #f4f7fb;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   PAUSE / STOP
+   ========================================================= */
+
+.control-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+
+/*
+   BOTH PAUSE AND STOP USE THE SAME NAVY STYLE.
+*/
+
+.secondary-btn {
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #e8ebf0;
+
+    color: #7e8490;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        opacity 0.2s ease;
+}
+
+
+/*
+   ENABLED PAUSE AND STOP
+*/
+
+.secondary-btn:not(:disabled) {
+    background: var(--navy);
+    color: white;
+}
+
+
+/*
+   IMPORTANT:
+   STOP IS NO LONGER RED.
+*/
+
+.danger-btn:not(:disabled) {
+    background: var(--navy);
+    color: white;
+}
+
+
+/*
+   HOVER EFFECT FOR BOTH BUTTONS
+*/
+
+.secondary-btn:not(:disabled):hover {
+    background: var(--navy-light);
+
+    transform: translateY(-1px);
+}
+
+.secondary-btn:not(:disabled):active {
+    transform: translateY(0);
+}
+
+
+/*
+   DISABLED BUTTON
+*/
+
+.secondary-btn:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.statistics-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px 18px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+}
+
+.stat-icon {
+    font-size: 23px;
+
+    margin-bottom: 7px;
+}
+
+.stat-value {
+    font-size: 32px;
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    color: var(--navy);
+}
+
+.stat-label {
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   GOAL CARD
+   ========================================================= */
+
+.goal-card {
+    background: white;
+
+    border-radius: var(--radius);
+
+    padding: 28px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 22px;
+}
+
+.goal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.goal-header > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.goal-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.goal-icon {
+    font-size: 21px;
+}
+
+.goal-header h2 {
+    font-size: 21px;
+}
+
+.goal-number {
+    font-size: 15px;
+
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.progress-container {
+    width: 100%;
+
+    height: 13px;
+
+    background: #e9edf3;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    margin-bottom: 13px;
+}
+
+.progress-bar {
+    height: 100%;
+
+    width: 0%;
+
+    background: var(--navy);
+
+    border-radius: inherit;
+
+    transition: width 0.4s ease;
+}
+
+.progress-message {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   GOAL STATS
+   ========================================================= */
+
+.goal-stats {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.today-stat,
+.best-streak-stat {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    background: var(--soft);
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    margin-top: 0;
+}
+
+.today-stat-icon,
+.best-streak-icon {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    font-size: 21px;
+}
+
+.today-stat strong,
+.best-streak-stat strong {
+    display: block;
+
+    font-size: 22px;
+
+    line-height: 1.1;
+}
+
+.today-stat span,
+.best-streak-stat span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   HISTORY
+   ========================================================= */
+
+.history-section {
+    margin-bottom: 22px;
+}
+
+.history-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 13px;
+}
+
+.history-header > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.history-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.history-header h2 {
+    font-size: 21px;
+}
+
+.history-header > span {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.history-icon {
+    font-size: 20px;
+}
+
+.session-history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.empty-history {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.session-history-item {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 14px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    box-shadow: 0 3px 12px rgba(23, 31, 51, 0.04);
+}
+
+.session-history-item strong {
+    font-size: 13px;
+}
+
+.session-history-item small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+.session-history-item .completed {
+    color: var(--success);
+
+    font-weight: 700;
+
+    font-size: 12px;
+}
+
+.session-history-item .stopped {
+    color: var(--muted);
+
+    font-weight: 700;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   BLOCKED WEBSITES
+   ========================================================= */
+
+.blocked-card {
+    background: white;
+
+    border-radius: var(--radius);
+
+    padding: 28px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 22px;
+}
+
+.blocked-header {
+    margin-bottom: 18px;
+}
+
+.blocked-header h2 {
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.blocked-header p {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BLOCKING STATUS
+   ========================================================= */
+
+.blocking-small-status {
+    display: inline-flex;
+
+    gap: 6px;
+
+    align-items: center;
+
+    background: #f4f7fb;
+
+    border-radius: 999px;
+
+    padding: 8px 14px;
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+.blocking-small-status strong {
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   BLOCKED COUNT
+   ========================================================= */
+
+.blocked-count {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.blocked-count strong {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   ADD WEBSITE
+   ========================================================= */
+
+.website-add {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+}
+
+.website-add input {
+    width: 100%;
+
+    min-height: 52px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.website-add input:focus {
+    border-color: var(--navy);
+}
+
+.website-add button {
+    min-width: 82px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   WEBSITE LIST
+   ========================================================= */
+
+.blocked-websites {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.blocked-websites li {
+    min-height: 50px;
+
+    background: var(--soft);
+
+    border-radius: 13px;
+
+    padding: 10px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    font-size: 13px;
+}
+
+.blocked-websites button {
+    border: none;
+
+    background: transparent;
+
+    color: var(--danger);
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+.blocked-websites .remove-website {
+    color: var(--danger);
+}
+
+.blocked-websites .locked-website {
+    color: var(--muted);
+
+    cursor: not-allowed;
+}
+
+.empty-blocked {
+    justify-content: center;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BLOCKED APPS
+   ========================================================= */
+
+.apps-placeholder {
+    background: var(--soft);
+
+    border-radius: 17px;
+
+    padding: 28px 18px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.apps-placeholder-icon {
+    font-size: 30px;
+
+    margin-bottom: 4px;
+}
+
+.apps-placeholder strong {
+    font-size: 14px;
+}
+
+.apps-placeholder span {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.app-footer {
+    text-align: center;
+
+    padding: 20px 10px 5px;
+
+    color: var(--muted);
+}
+
+.app-footer p {
+    font-weight: 700;
+
+    color: var(--navy);
+
+    margin-bottom: 3px;
+}
+
+.app-footer span {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOCUS ACTIVE
+   ========================================================= */
+
+body.focus-active .status-badge {
+    background: #eaf7f0;
+
+    color: var(--success);
+}
+
+body.focus-active .start-btn {
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .app-container {
+        width: min(100% - 24px, 650px);
+
+        margin-top: 20px;
+    }
+
+    .focus-card,
+    .goal-card,
+    .blocked-card {
+        padding: 24px;
+    }
+
+    .pin-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pin-form button {
+        grid-column: 1 / -1;
+
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — PHONE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .app-header {
+        padding: 22px 15px;
+    }
+
+    .app-header h1 {
+        font-size: 24px;
+    }
+
+    .app-container {
+        width: calc(100% - 20px);
+
+        margin: 15px auto 35px;
+    }
+
+    .focus-card {
+        padding: 20px 16px;
+
+        border-radius: 20px;
+    }
+
+    .focus-intro {
+        margin-bottom: 24px;
+    }
+
+    .focus-intro h2 {
+        font-size: 23px;
+    }
+
+    .focus-intro p {
+        font-size: 13px;
+    }
+
+
+    /* Duration */
+
+    .duration-section {
+        gap: 8px;
+
+        margin-bottom: 30px;
+    }
+
+    .duration-btn {
+        min-height: 58px;
+
+        border-radius: 13px;
+
+        font-size: 13px;
+    }
+
+
+    /* Mode */
+
+    .mode-heading h2 {
+        font-size: 22px;
+    }
+
+    .mode-heading p {
+        font-size: 13px;
+    }
+
+    .mode-options {
+        gap: 8px;
+    }
+
+    .mode-btn {
+        min-height: 86px;
+
+        padding: 10px 5px;
+
+        border-radius: 14px;
+    }
+
+    .mode-btn strong {
+        font-size: 13px;
+    }
+
+    .mode-btn span {
+        font-size: 10px;
+
+        text-align: center;
+    }
+
+
+    /* PIN */
+
+    .pin-section {
+        padding: 18px;
+
+        border-radius: 17px;
+    }
+
+    .pin-heading h3 {
+        font-size: 18px;
+    }
+
+    .pin-heading p {
+        font-size: 12px;
+    }
+
+    .pin-form {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+    .pin-form button {
+        grid-column: auto;
+    }
+
+
+    /* Timer */
+
+    .timer-section {
+        padding: 27px 0 20px;
+    }
+
+    .timer-display {
+        font-size: 64px;
+
+        letter-spacing: -2px;
+    }
+
+
+    /* Controls */
+
+    .control-buttons {
+        gap: 8px;
+    }
+
+    .secondary-btn {
+        min-height: 45px;
+
+        font-size: 12px;
+    }
+
+
+    /* Statistics */
+
+    .statistics-grid {
+        gap: 9px;
+    }
+
+    .stat-card {
+        padding: 18px 8px;
+
+        border-radius: 16px;
+    }
+
+    .stat-icon {
+        font-size: 19px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+
+    /* Goal */
+
+    .goal-card {
+        padding: 20px 16px;
+
+        border-radius: 20px;
+    }
+
+    .goal-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    .goal-header h2 {
+        font-size: 19px;
+    }
+
+    .goal-number {
+        font-size: 14px;
+    }
+
+
+    /* History */
+
+    .history-header h2 {
+        font-size: 19px;
+    }
+
+    .history-header > span {
+        display: none;
+    }
+
+
+    /* Websites */
+
+    .blocked-card {
+        padding: 20px 16px;
+
+        border-radius: 20px;
+    }
+
+    .blocked-header h2 {
+        font-size: 19px;
+    }
+
+    .website-add {
+        grid-template-columns: 1fr auto;
+    }
+
+    .website-add button {
+        min-width: 68px;
+    }
+
+    .blocked-websites li {
+        min-height: 48px;
+
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .duration-btn {
+        font-size: 11px;
+    }
+
+    .mode-btn strong {
+        font-size: 11px;
+    }
+
+    .mode-btn span {
+        font-size: 9px;
+    }
+
+    .timer-display {
+        font-size: 55px;
+    }
+
+    .stat-value {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(23, 31, 51, 0.2);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   PREVENT OVERFLOW
+   ========================================================= */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
